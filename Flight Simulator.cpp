@@ -93,11 +93,11 @@ public:
             }
         }
 
-        double xImpact = (x0 + vx0 * timeToImpact) * 2;
-        double zImpact = (z0 + vz0 * timeToImpact) * 2;
+        double xImpact = (x0 + vx0 * timeToImpact);
+        double zImpact = (z0 + vz0 * timeToImpact);
 
         std::cout << "Estimated time to impact: " << std::fixed << std::setprecision(2)
-            << timeToImpact * 2 << " seconds" << std::endl;
+            << timeToImpact << " seconds" << std::endl;
 
         return Point3D(xImpact, 0, zImpact);
     }
